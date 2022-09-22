@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/scss/font-awesome";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+$background-color: #EDF2F3;
+$primary-dark: #212529;
+$primary-base: #5426a6;
+$primary-text: #009dff;
+
+:root {
+  --background-color: #EDF2F3;
+  --primary-dark: #212529;
+  --primary-base: #5426a6;
+  --primary-text: #009dff;
+}
+
+
+.notification {
+  background: var(--primary-dark);
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+}
