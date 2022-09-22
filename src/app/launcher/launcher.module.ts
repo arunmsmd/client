@@ -1,28 +1,29 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from "@angular/forms";
 
-import { LauncherRoutingModule } from './launcher-routing.module';
-import { HeaderComponent } from './header/header.component';
-import { ContentComponent } from './content/content.component';
-import { FooterComponent } from './footer/footer.component';
-import { ContactComponent } from './contact/contact.component';
+import {LauncherRoutingModule} from './launcher-routing.module';
+import {LauncherBaseComponent} from './base/base.component';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {ContactComponent} from './contact/contact.component';
 
 
 @NgModule({
-    declarations: [
-        HeaderComponent,
-        ContentComponent,
-        FooterComponent,
-        ContactComponent
-    ],
-  exports: [
+  declarations: [
+    LauncherBaseComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent
+    ContactComponent,
   ],
-    imports: [
-        CommonModule,
-        LauncherRoutingModule
-    ]
+  exports: [
+    LauncherBaseComponent,
+  ],
+  imports: [
+    CommonModule,
+    LauncherRoutingModule,
+    FormsModule
+  ]
 })
-export class LauncherModule { }
+export class LauncherModule {
+}
