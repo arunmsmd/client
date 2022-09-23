@@ -12,13 +12,19 @@
     </div>
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-centre">
-        <li class=""><a routerLink="/admin/" >Dashboard</a></li>
+        <li class="" *ngIf="isLogin"><a routerLink="/admin/">Dashboard</a></li>
         <li class=""><a routerLink="/">HOME</a></li>
         <li class=""><a routerLink="/about">ABOUT US</a></li>
+        <li routerLinkActive="active"><a routerLink="/contact_us" class="active">Contact us</a></li>
       </ul>
       <div class="nav navbar-right">
-        <button class="btn btn-primary navbar-btn">Logout</button>
-        <a routerLink="/login/"  class="btn btn-primary navbar-btn">Login</a>
+        <div *ngIf="isLogin; then ifLogin else elseLogin"></div>
+        <ng-template #ifLogin>
+          <button (click)="logout()" class="btn btn-primary navbar-btn">Logout</button>
+        </ng-template>
+        <ng-template #elseLogin>
+          <a routerLink="/login/" class="btn btn-primary navbar-btn">Login</a>
+        </ng-template>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {AdminBaseComponent} from "./admin/base/base.component";
 import {LauncherBaseComponent} from "./launcher/base/base.component";
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminBaseComponent,
+    canActivate: [AuthGuardService],
     loadChildren: () => import('./admin/admin.module').then(m=>m.AdminModule)
   }
 ];
@@ -21,4 +23,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {
+  
 }

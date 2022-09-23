@@ -7,7 +7,6 @@ import {LauncherBaseComponent} from './base/base.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {ContactComponent} from './contact/contact.component';
-import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -16,7 +15,6 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     FooterComponent,
     ContactComponent,
-    LoginComponent,
   ],
   exports: [
     LauncherBaseComponent,

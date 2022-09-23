@@ -21,6 +21,7 @@
     "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.1",
+    "metismenu": "^3.0.7",
     "rxjs": "~7.5.0",
     "save": "^2.5.0",
     "tslib": "^2.3.0",

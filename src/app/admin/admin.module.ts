@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
-import { ContentComponent } from './content/content.component';
 import {AdminBaseComponent} from "./base/base.component";
+import { NavComponent } from './nav/nav.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
   declarations: [
     AdminBaseComponent,
-    ContentComponent
+    NavComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
