@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {AuthService} from "../../services/auth.service";
+import {Router} from "@angular/router";
 declare var $:any;
 
 @Component({
@@ -13,7 +15,10 @@ declare var $:any;
 })
 export class AdminBaseComponent implements OnInit {
 
-  constructor() {
+  constructor(
+    private _auth: AuthService,
+    private _router: Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -68,5 +73,8 @@ export class AdminBaseComponent implements OnInit {
     this.setBodySmall()
     this.fixWrapperHeight()
   }
-
+  logout() {
+    this._auth.clearStorage()
+    this._router.navigate(['']);
+  }
 }

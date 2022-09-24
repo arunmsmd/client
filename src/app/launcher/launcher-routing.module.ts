@@ -4,7 +4,7 @@ import {ContactComponent} from "./contact/contact.component";
 import {LoginComponent} from "../auth/login/login.component";
 
 const routes: Routes = [
-  {path: 'contact_us', component: ContactComponent},
+  {path: '', component: ContactComponent},
   {path: 'login', component: LoginComponent}
 ];
 

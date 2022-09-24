@@ -5,6 +5,7 @@ import {AppComponent} from './app.component';
 import {LauncherModule} from "./launcher/launcher.module";
 import { HttpClientModule } from '@angular/common/http';
 import {AuthModule} from "./auth/auth.module";
+import {DataTablesModule} from "angular-datatables";
 
 
 @NgModule({
@@ -13,10 +14,11 @@ import {AuthModule} from "./auth/auth.module";
   ],
   imports: [
     BrowserModule,
+    DataTablesModule,
     AppRoutingModule,
     LauncherModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

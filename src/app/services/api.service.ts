@@ -16,11 +16,15 @@ export class ApiService {
       return res;
     }));
   }
+  getDataTypeRequest(url:any, payload:any) {
+    return this._http.get(this.baseUrl+url + '/' + payload).pipe(map(res => {
+      return res;
+    }));
+  }
 
   postTypeRequest(url:any, payload:any) {
     var x = this.baseUrl + url
-    console.log(x)
-    return this._http.post('http://localhost:8080/user/login', payload).pipe(map(res => {
+    return this._http.post(x, payload).pipe(map(res => {
       return res;
     }));
   }
@@ -30,5 +34,9 @@ export class ApiService {
       return res;
     }));
   }
-
+  deleteTypeRequest(url:any, payload:any){
+    return this._http.delete(this.baseUrl+ url + '/' +payload).pipe(map(res => {
+      return res;
+    }));
+  }
 }

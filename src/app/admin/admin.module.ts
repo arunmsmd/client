@@ -4,6 +4,8 @@ import { AdminRoutingModule } from './admin-routing.module';
 import {AdminBaseComponent} from "./base/base.component";
 import { NavComponent } from './nav/nav.component';
 import { ContactComponent } from './contact/contact.component';
+import {DataTablesModule} from "angular-datatables";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    DataTablesModule,
+    FormsModule
   ]
 })
 export class AdminModule { }
